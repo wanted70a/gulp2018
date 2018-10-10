@@ -1,0 +1,60 @@
+//----- Variables / Typography
+
+//------FONT-FACE
+// $font-path:'../_common/fonts';
+//  @font-face {
+// 	font-family: 'Airways';
+// 	src: url('#{$font-path}/Generika/GenerikaRegular.ttf');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+
+
+//------FONT FAMILY VARIBALE
+$fontDefault              : Arial, sans-serif;
+
+// Examples
+// $ff == $font-family
+// $ff-main-regular          : 'Generika-Regular';
+// $ff-main-bold             : 'Generika-Bold';
+// $ff-sec-regular           : 'OpenSans-Regular';
+// $ff-sec-bold              : 'OpenSans-Bold';
+
+//----- Font size
+$font-size-base           : 10;
+
+//------GLOBAL FONT SETTINGS
+html {
+  @include font-size-vw($font-size-base, $font-size-base);
+}
+body {
+    font-family: $fontDefault;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+
+	&.fixed {
+		position: relative;
+		overflow: auto !important;
+		height: 100%;
+		max-height: 100%;
+
+		@include breakpoint(overPhone) {
+			overflow: hidden !important;
+		}
+	}
+}
+
+h1 {
+
+}
+h2 {}
+a {
+    text-decoration: none;
+}
+p {}
